@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block title %}Hizmetler{% endblock %}
+{% block content %}
+<h2>Hizmetlerimiz</h2>
+<div class="row">
+  {% for s in services %}
+  <div class="col-md-4">
+    <div class="card mb-3">
+      <div class="card-body">
+        <h5 class="card-title">{{ s.title }}</h5>
+        <p class="card-text">{{ s.desc }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

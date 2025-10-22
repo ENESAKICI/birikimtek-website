@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+{% block title %}Ana Sayfa{% endblock %}
+{% block content %}
+<div class="text-center">
+  <h1>AKICI Yazılım</h1>
+  <p class="lead">Sanayiye özel sürdürülebilir teknolojik çözümler — Malzeme bilimi & metalurji odaklı.</p>
+  <a href="/services" class="btn btn-primary">Hizmetlerimizi Gör</a>
+</div>
+
+<section class="row mt-5">
+  <div class="col-md-6">
+    <h3>Öne çıkan çözümler</h3>
+    <ul>
+      <li>Görüntü işleme ile üretim hattı kalite kontrolü</li>
+      <li>Otomatik mikroyapı analizleri (metallografi)</li>
+      <li>Kestirimci bakım ve proses optimizasyonu</li>
+    </ul>
+  </div>
+  <div class="col-md-6">
+    <img src="{{ url_for('static', filename='images/industry.jpg') }}" alt="industry" class="img-fluid">
+  </div>
+</section>
+{% endblock %}

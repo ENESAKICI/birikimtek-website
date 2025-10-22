@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block title %}İletişim{% endblock %}
+{% block content %}
+<h2>İletişim</h2>
+<form method="POST">
+  {{ form.hidden_tag() }}
+  <div class="mb-3">
+    {{ form.name.label(class_='form-label') }}
+    {{ form.name(class_='form-control') }}
+  </div>
+  <div class="mb-3">
+    {{ form.email.label(class_='form-label') }}
+    {{ form.email(class_='form-control') }}
+  </div>
+  <div class="mb-3">
+    {{ form.company.label(class_='form-label') }}
+    {{ form.company(class_='form-control') }}
+  </div>
+  <div class="mb-3">
+    {{ form.message.label(class_='form-label') }}
+    {{ form.message(class_='form-control', rows=6) }}
+  </div>
+  <button class="btn btn-primary" type="submit">Gönder</button>
+</form>
+{% endblock %}
